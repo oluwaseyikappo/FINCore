@@ -12,10 +12,10 @@ import org.springframework.context.annotation.Configuration;
 public class SwaggerConfig {
 
     @Bean
-    public OpenAPI fintaxProAPI() {
+    public OpenAPI fincore() {
         return new OpenAPI()
                 .info(new Info()
-                        .title("FintaxPro Tax Computation API")
+                        .title("FinCore Tax Computation API")
                         .description("Enterprise-grade API for computing federal tax, saving computations, and retrieving tax data")
                         .version("1.0.0")
                 )
