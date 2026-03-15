@@ -188,6 +188,154 @@ This ensures traceability and production‑grade observability.
 ---
 
 
+---
+
+## 🖼️ Project Banner
+> **FinCore Platform — Secure, Modular, Enterprise‑Grade Backend System**  
+> A production‑ready Spring Boot platform featuring authentication, authorization, tax computation, and clean architecture.
+
+---
+
+## 📚 Documentation (Docs Folder)
+All extended documentation is organized under the `/docs` directory:
+
+```
+docs/
+ ├── architecture.md
+ ├── modules.md
+ ├── api-design.md
+ ├── security.md
+ ├── tax-engine.md
+ └── roadmap.md
+```
+
+Each file provides deeper insight into system design, engineering decisions, and implementation details.
+
+---
+
+## 🔌 API Usage Examples
+
+### **1. Register User**
+**POST** `/api/v1/auth/register`
+```json
+{
+  "firstName": "Oluwaseyi",
+  "lastName": "Kappo",
+  "email": "user@example.com",
+  "password": "Password123!"
+}
+```
+
+### **2. Login User**
+**POST** `/api/v1/auth/login`
+```json
+{
+  "email": "user@example.com",
+  "password": "Password123!"
+}
+```
+
+### **3. Authorized Request**
+Include JWT in header:
+```
+Authorization: Bearer <token>
+```
+
+---
+
+## 🗺️ Roadmap
+
+### **Phase 1 — Core System (Completed)**
+- User registration & login  
+- JWT authentication  
+- Role-based authorization  
+- Database migrations (Flyway)  
+- Logging & exception handling  
+- Swagger documentation  
+
+### **Phase 2 — Tax Engine Expansion**
+- Add multiple tax brackets  
+- Add state-level tax rules  
+- Add tax history tracking  
+
+### **Phase 3 — Platform Enhancements**
+- Email verification  
+- Password reset  
+- Audit logging  
+- Admin dashboard API  
+
+---
+
+## 🛠️ Environment Setup
+
+### **Prerequisites**
+- Java 17  
+- Maven  
+- PostgreSQL  
+- IntelliJ IDEA (recommended)
+
+### **Steps**
+1. Clone the repository:
+   ```
+   git clone https://github.com/oluwaseyikappo/FinCore.git
+   ```
+2. Configure PostgreSQL credentials in:
+   ```
+   src/main/resources/application.properties
+   ```
+3. Run Flyway migrations automatically on startup  
+4. Start the application:
+   ```
+   mvn spring-boot:run
+   ```
+5. Open Swagger UI:
+   ```
+   http://localhost:8081/swagger-ui.html
+   ```
+
+---
+
+## 📄 License (MIT)
+
+```
+MIT License
+
+Copyright (c) 2026
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction...
+```
+
+---
+
+## 🤝 Contribution Guidelines
+
+### **How to Contribute**
+1. Fork the repository  
+2. Create a new branch:
+   ```
+   git checkout -b feature/my-feature
+   ```
+3. Commit your changes:
+   ```
+   git commit -m "Add new feature"
+   ```
+4. Push the branch:
+   ```
+   git push origin feature/my-feature
+   ```
+5. Open a Pull Request  
+
+### **Coding Standards**
+- Follow clean architecture principles  
+- Use meaningful commit messages  
+- Ensure code is formatted and tested  
+
+---
+
+
+
 ## 🧱 How to Run Locally
 
 ```
